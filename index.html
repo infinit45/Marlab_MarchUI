@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="MarchUI">
+  <meta name="author" content="Lars">
+
+  <link rel="stylesheet" href="">
+  
+  <script src=""></script>
+  <!--  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>  -->
+
+  <script>
+      function check() {
+        var checkbox = document.getElementById("edit");
+        var textbox = document.getElementById("meal");
+       
+        if (checkbox.checked == true){
+            console.log("checked!");
+            textbox.disabled = "true";
+        }
+        else{
+            console.log("unchecked!");
+            textbox.disabled = false;
+        }
+        };
+        
+        
+  </script>
+</head>
+
+<body style = "font-family: Arial, Helvetica, sans-serif">
+  <input id="edit" type="checkbox" onclick="check()">
+  <input id="meal" type="text " name="text" placeholder="beef">
+
+</body>
+</html>
