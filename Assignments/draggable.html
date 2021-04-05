@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('DOMContentLoaded',()=>{
+            const img = document.getElementById("image01");
+        });
+        function drag(event){
+            event.dataTransfer.setData("Text", event.target.id);
+            
+        }
+        function drop(event){
+            event.preventDefault();
+            var data = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(data));
+        }
+        function allowDrop(event){
+            event.preventDefault();
+        }
+
+
+        
+    </script>
+    <style>
+        #div1{
+            border: 3px solid green;
+            height: 500px;
+            width: 900px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <button id="button1" ondragover="allowDrop(event)" value="Uplpoad File" style="height: 150px; width: 400px;"></button>
+        <image ondragstart="drag(event)" draggable="true" id="image01" 
+            src=".\jellyfish.jpg" style="height:100px; width:100px;"/>
+    </div
+</body>
+</html>
+
